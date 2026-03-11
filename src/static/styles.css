@@ -28,6 +28,38 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* ---- Tab navigation ---- */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding-bottom: 4px;
+}
+
+.tab-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 24px;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+  background-color: white;
+  color: #1a237e;
+  border-color: white;
+  font-weight: bold;
+}
+
+/* ---- Activities layout ---- */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -141,4 +173,260 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* =========================================================================
+   Motorsport Insights
+   ========================================================================= */
+
+.insights-layout {
+  display: block;
+  max-width: 100%;
+}
+
+/* Sub-navigation */
+.insights-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.subnav-btn {
+  background-color: #e8eaf6;
+  color: #1a237e;
+  border: 1px solid #c5cae9;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.subnav-btn:hover {
+  background-color: #c5cae9;
+}
+
+.subnav-btn.active {
+  background-color: #1a237e;
+  color: white;
+  border-color: #1a237e;
+  font-weight: bold;
+}
+
+/* Insights sections */
+.insights-section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.insights-section h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #1a237e;
+  font-size: 1.2rem;
+}
+
+/* Insight cards */
+.insight-card {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.insight-card h4 {
+  margin-bottom: 10px;
+  color: #283593;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.insight-card p {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+}
+
+.insight-card ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.insight-card ul li {
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.badge-positive {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge-neutral {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.badge-negative {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.trend-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  margin-left: 8px;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  background-color: #ede7f6;
+  color: #4527a0;
+  margin-left: 6px;
+}
+
+/* Sentiment bars */
+.sentiment-bar {
+  display: flex;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 10px 0 4px;
+}
+
+.bar-positive { background-color: #4caf50; }
+.bar-neutral  { background-color: #ffc107; }
+.bar-negative { background-color: #f44336; }
+
+.bar-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.legend-positive { color: #2e7d32; }
+.legend-neutral  { color: #f57f17; }
+.legend-negative { color: #c62828; }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  background-color: #e8eaf6;
+  color: #283593;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+/* Insight table */
+.insight-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.insight-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background-color: #e8eaf6;
+  color: #1a237e;
+  border-bottom: 2px solid #c5cae9;
+}
+
+.insight-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.insight-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Industry impact */
+.industry-impact {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #e3f2fd;
+  border-left: 4px solid #1565c0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Innovation impact grid */
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.impact-box {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+.impact-box strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+
+.impact-box.motorcycle {
+  background-color: #e8f5e9;
+  border-left: 4px solid #388e3c;
+}
+
+.impact-box.manufacturing {
+  background-color: #fce4ec;
+  border-left: 4px solid #c2185b;
+}
+
+.meta {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 10px;
 }

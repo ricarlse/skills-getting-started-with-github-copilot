@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mergington High School Activities</title>
+    <title>Mergington High School Activities &amp; Motorsport Insights</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <h2>Extracurricular Activities &amp; Motorsport AI Insights</h2>
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="activities">Activities</button>
+        <button class="tab-btn" data-tab="insights">Motorsport Insights</button>
+      </nav>
     </header>
 
-    <main>
+    <!-- ===== ACTIVITIES TAB ===== -->
+    <main id="tab-activities" class="tab-content active">
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
@@ -32,13 +36,56 @@
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
             </select>
           </div>
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
+    </main>
+
+    <!-- ===== MOTORSPORT INSIGHTS TAB ===== -->
+    <main id="tab-insights" class="tab-content hidden insights-layout">
+
+      <!-- Sub-navigation -->
+      <div class="insights-subnav">
+        <button class="subnav-btn active" data-section="fans">Fan Sentiments</button>
+        <button class="subnav-btn" data-section="drivers">Driver Sentiments</button>
+        <button class="subnav-btn" data-section="teams">Team Sentiments</button>
+        <button class="subnav-btn" data-section="manufacturers">Manufacturer Sentiments</button>
+        <button class="subnav-btn" data-section="innovations">Technical Innovations</button>
+      </div>
+
+      <!-- Fan Sentiments -->
+      <section id="section-fans" class="insights-section">
+        <h3>🏁 Fan Sentiments</h3>
+        <div id="fan-sentiments-content"><p>Loading...</p></div>
+      </section>
+
+      <!-- Driver Sentiments -->
+      <section id="section-drivers" class="insights-section hidden">
+        <h3>🏍️ Driver Sentiments</h3>
+        <div id="driver-sentiments-content"><p>Loading...</p></div>
+      </section>
+
+      <!-- Team Sentiments -->
+      <section id="section-teams" class="insights-section hidden">
+        <h3>🔧 Team Sentiments</h3>
+        <div id="team-sentiments-content"><p>Loading...</p></div>
+      </section>
+
+      <!-- Manufacturer Sentiments -->
+      <section id="section-manufacturers" class="insights-section hidden">
+        <h3>🏭 Manufacturer Sentiments</h3>
+        <div id="manufacturer-sentiments-content"><p>Loading...</p></div>
+      </section>
+
+      <!-- Technical Innovations -->
+      <section id="section-innovations" class="insights-section hidden">
+        <h3>⚙️ Technical Innovations</h3>
+        <div id="innovations-content"><p>Loading...</p></div>
+      </section>
+
     </main>
 
     <footer>
